@@ -1,0 +1,31 @@
+-- Create a bookstore database
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, author TEXT, prices INTEGER, pages INTEGER, sales INTEGER);
+
+INSERT INTO books VALUES (1, "Twilight", "Stephenie Meyer", 29.99, 403, 1238);
+INSERT INTO books VALUES (2, "New Moon", "Stephenie Meyer", 29.99, 478, 1349);
+INSERT INTO books VALUES (3, "Eclipse", "Stephenie Meyer", 27.99, 488, 1347);
+INSERT INTO books VALUES (4, "The School for Good Mothers", "Jessamine Chan", 31.45, 498, 2387);
+INSERT INTO books VALUES (5, "The Gifts of Imperfection", "Brene Brown", 20.89, 305, 8976);
+INSERT INTO books VALUES (6, "Atomic Habits", "James Clear", 19.99, 312, 6476);
+INSERT INTO books VALUES (7, "The Defining Decade", "Meg Jay, PHD", 13.76, 209, 6547);
+INSERT INTO books VALUES (8, "I'm Glad My Mom Died", "Jennette McCurdy", 28.76, 321, 47229);
+INSERT INTO books VALUES (9, "My Body", "Emily Ratajkowski", 11.87, 156, 6362);
+INSERT INTO books VALUES (10, "The Woman in Cabin 10", "Ruth Ware", 17.96, 368, 8373);
+INSERT INTO books VALUES (11, "Motherthing", "Ainslie Hogarth", 16.00, 389, 3982);
+INSERT INTO books VALUES (12, "The Fault in Our Stars", "John Green", 15.54, 456, 8392);
+INSERT INTO books VALUES (13, "The Meaning of Mariah Carey", "Mariah Carey", 25.89, 489, 4627);
+INSERT INTO books VALUES (14, "Crazy Rich Asians", "Kevin Kwan", 14.88, 345, 328);
+INSERT INTO books VALUES (15, "IT", "Stephen King", 30.09, 1145, 3527);
+
+-- display the database ordered by price. 
+SELECT * from books 
+order by prices;
+
+-- what is the average price of items in the bookstore?
+SELECT AVG(prices)
+from books;
+
+-- how many sales has the store made so far?
+SELECT SUM(SALES)
+FROM Books;
